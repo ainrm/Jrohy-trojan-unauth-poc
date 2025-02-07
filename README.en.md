@@ -19,7 +19,7 @@ Affected versions:
 Register the route and use the `updateUser` function to handle `/auth/register` requests
 
 ```go
-// https://github.com/Jrohy/trojan/blob/master/web/auth.go#L155
+// https://github.com/Jrohy/trojan/tree/v2.15.3/web/auth.go#L155
 
 func Auth(r *gin.Engine, timeout int) *jwt.GinJWTMiddleware {
     jwtInit(timeout)
@@ -37,7 +37,7 @@ func Auth(r *gin.Engine, timeout int) *jwt.GinJWTMiddleware {
 Extract `password` from the request and pass it to `SetValue`
 
 ```go
-// https://github.com/Jrohy/trojan/blob/master/web/auth.go#L113
+// https://github.com/Jrohy/trojan/tree/v2.15.3/web/auth.go#L113
 
 func updateUser(c *gin.Context) {
     responseBody := controller.ResponseBody{Msg: "success"}
@@ -55,7 +55,7 @@ func updateUser(c *gin.Context) {
 Update the database and write the new password
 
 ```go
-// https://github.com/Jrohy/trojan/blob/master/core/leveldb.go#L30
+// https://github.com/Jrohy/trojan/tree/v2.15.3/core/leveldb.go#L30
 
 func SetValue(key string, value string) error {
     db, err := leveldb.OpenFile(dbPath, nil)
