@@ -1,6 +1,6 @@
 # Jrohy/trojan Unauthorized modification of administrator password
 
-[中文版本(Chinese version)](README.zh-cn.md)
+[中文版本(Chinese version)](README.md)
 
 Jrohy/trojan is an open source project based on Go to automatically deploy trojan services. Its web-side initialization interface `/auth/register` failed to close properly after user configuration, allowing unauthorized visitors to directly modify the administrator password.
 
