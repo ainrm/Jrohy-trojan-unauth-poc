@@ -19,7 +19,7 @@ Jrohy/trojan 是一个基于 Go 开发的自动化部署 trojan 服务的开源�
 注册路由，使用 `updateUser` 函数处理`/auth/register`请求
 
 ```go
-// https://github.com/Jrohy/trojan/blob/master/web/auth.go#L155
+// https://github.com/Jrohy/trojan/tree/v2.15.3/web/auth.go#L155
 
 func Auth(r *gin.Engine, timeout int) *jwt.GinJWTMiddleware {
 	jwtInit(timeout)
@@ -37,7 +37,7 @@ func Auth(r *gin.Engine, timeout int) *jwt.GinJWTMiddleware {
 从请求中提取`password`，传入`SetValue`
 
 ```go
-// https://github.com/Jrohy/trojan/blob/master/web/auth.go#L113
+// https://github.com/Jrohy/trojan/tree/v2.15.3/web/auth.go#L113
 
 func updateUser(c *gin.Context) {
 	responseBody := controller.ResponseBody{Msg: "success"}
@@ -55,7 +55,7 @@ func updateUser(c *gin.Context) {
 更新数据库，写入新密码
 
 ```go
-// https://github.com/Jrohy/trojan/blob/master/core/leveldb.go#L30
+// https://github.com/Jrohy/trojan/tree/v2.15.3/core/leveldb.go#L30
 
 func SetValue(key string, value string) error {
 	db, err := leveldb.OpenFile(dbPath, nil)
